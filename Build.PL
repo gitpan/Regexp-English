@@ -9,7 +9,7 @@ my $builder = Module::Build->new(
     dist_version_from   => 'lib/Regexp/English.pm',
 	requires            =>
 	{
-		'Scalar::Util'  => '',
+		'Scalar::Util'  => '1.21',
 	},
     build_requires      =>
 	{
@@ -17,7 +17,6 @@ my $builder = Module::Build->new(
     },
     add_to_cleanup      => [ 'Regexp-English-*' ],
 	create_makefile_pl  => 'traditional',
-	sign                => 1,
 );
 
 $builder->create_build_script();
